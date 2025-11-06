@@ -1,0 +1,101 @@
+# -----------------------------
+# 🧠 Python & Jupyter
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.so
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+*.egg-info/
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.ckpt
+*.tfrecord
+.DS_Store
+
+# -----------------------------
+# 📦 Virtual Environments
+# -----------------------------
+venv/
+.env/
+.venv/
+env/
+ENV/
+*.env
+conda-meta/
+Scripts/
+Lib/
+Include/
+bin/
+share/
+pyvenv.cfg
+
+# -----------------------------
+# 💾 Data & Datasets
+# -----------------------------
+data/
+dataset/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.csv
+*.npz
+*.npy
+*.mat
+*.json
+*.txt
+!requirements.txt   # keep dependency list tracked
+
+# -----------------------------
+# 🧪 Logs & Outputs
+# -----------------------------
+logs/
+*.log
+*.out
+*.err
+*.tmp
+*.swp
+*.bak
+
+# -----------------------------
+# 🧰 IDE & OS Specific
+# -----------------------------
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -----------------------------
+# 🧪 Jupyter Auto-Generated
+# -----------------------------
+.ipynb_checkpoints/
+profile_default/
+.ipython/
+jupyter_notebook_config.py
+
+# -----------------------------
+# 🧠 Model & Training Artifacts
+# -----------------------------
+checkpoints/
+runs/
+saved_models/
+models/
+*.pb
+*.onnx
+
+# -----------------------------
+# 🚀 Temporary Notebooks & Results
+# -----------------------------
+*_output.ipynb
+*_result.ipynb
+output/
+results/
+images/
+plots/
