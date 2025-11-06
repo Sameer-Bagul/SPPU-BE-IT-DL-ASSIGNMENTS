@@ -1,78 +1,509 @@
-# SPPU-BE-IT-DL-ASSIGNMENTS 🚀
+# SPPU BE IT Deep Learning Assignments 🚀
 
-![ViewCount](https://views.whatilearened.today/views/github/RanjeetKumbhar01/SPPU-BE-IT-DL-ASSIGNMENTS.svg)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-BE IT (2019 Course) || 414447: Lab Practice IV
+**BE IT (2019 Course) || 414447: Lab Practice IV**
 
-Welcome to the repository for your deep learning assignments. Below, you'll find details for each assignment, including the task description.
+Complete repository of Deep Learning assignments for Savitribai Phule Pune University (SPPU) BE IT students. This repository contains implementations of various neural network architectures, from basic feedforward networks to advanced transfer learning models.
 
-## Assignment 1: Study of Deep Learning Packages 📚
+---
 
-    Document the distinct features and functionality of deep learning packages, including TensorFlow, Keras, Theano, and PyTorch.
+## 📋 Table of Contents
 
-## Assignment 2: Implementing Feedforward Neural Networks with Keras and TensorFlow 🧠
+- [Prerequisites](#prerequisites)
+- [Quick Start](#quick-start)
+- [Setup Instructions](#setup-instructions)
+- [Assignments Overview](#assignments-overview)
+- [Dataset Information](#dataset-information)
+- [Running the Notebooks](#running-the-notebooks)
+- [Troubleshooting](#troubleshooting)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-Implement a feedforward neural network using Keras and TensorFlow.
+---
 
-    a. Import the necessary packages. 📦
-    b. Load the training and testing data (MNIST/CIFAR10). 📂
-    c. Define the network architecture using Keras. 🧮
-    d. Train the model using SGD. 🚀
-    e. Evaluate the network. 📊
-    f. Plot the training loss and accuracy. 📈
+## 🎯 Prerequisites
 
-## Assignment 3: Building an Image Classification Model 🖼️
+Before you begin, ensure you have the following installed:
 
-Build an image classification model divided into four stages.
+- **Python 3.8+** (Recommended: Python 3.9 or 3.10)
+- **pip** (Python package manager)
+- **Jupyter Notebook** or **VS Code** with Jupyter extension
+- **Git** (for cloning the repository)
+- **8GB+ RAM** (recommended for deep learning tasks)
+- **CUDA-compatible GPU** (optional, but recommended for faster training)
 
-    a. Loading and preprocessing the image data. 🖼️
-    b. Defining the model's architecture. 🏗️
-    c. Training the model. 📈
-    d. Estimating the model's performance. 📊
+---
 
-## Assignment 4: Anomaly Detection Using Autoencoder 🕵️
+## 🚀 Quick Start
 
-Implement anomaly detection using an autoencoder.
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/SPPU-BE-IT-DL-ASSIGNMENTS.git
+cd SPPU-BE-IT-DL-ASSIGNMENTS
 
-    a. Import required libraries. 📚
-    b. Upload/access the dataset. 📂
-    c. Encoder converts data into a latent representation. 🧐
-    d. Decoder networks convert it back to the original input. 🔄
-    e. Compile the models with Optimizer, Loss, and Evaluation Metrics. 📈
+# 2. Create a virtual environment (recommended)
+python -m venv venv
 
-## Assignment 5: Implementing the Continuous Bag of Words (CBOW) Model 📝
+# 3. Activate the virtual environment
+# On Linux/Mac:
+source venv/bin/activate
+# On Windows:
+# venv\Scripts\activate
 
-Implement the Continuous Bag of Words (CBOW) model.
+# 4. Install required packages
+pip install -r requirements.txt
 
-    a. Data preparation. 📊
-    b. Generate training data. 📂
-    c. Train the model. 🚀
-    d. Output. 📄
+# 5. Launch Jupyter Notebook or open in VS Code
+jupyter notebook
+# OR open the folder in VS Code
+```
 
-## Assignment 5: Object detection using Transfer Learning of CNN architectures 📷
+---
 
-Datasets: Caltech-101 and CIFAR10
+## ⚙️ Setup Instructions
 
-    a. Load in a pre-trained CNN model trained on a large dataset. 📸
-    b. Freeze parameters(weights) in model’s lower convolutional layers. ❄️
-    c. Add custom classifier with several layers of trainable parameters to model. 🏗️
-    d. Train classifier layers on training data available for task. 📈
-    e. Fine-tune hyper parameters and unfreeze more layers as needed. 🚀
+### Step 1: Environment Setup
 
-# Requirements 🛠️
+**Option A: Using Virtual Environment (Recommended)**
+```bash
+# Create virtual environment
+python -m venv venv
 
-To run the code in these assignments, you need to have Python installed on your system along with the required libraries and dependencies. Make sure to install the necessary packages mentioned in the assignment files. For Tableau, you will need to have Tableau software installed on your machine.
+# Activate it
+source venv/bin/activate  # Linux/Mac
+# OR
+venv\Scripts\activate     # Windows
 
-# License 📜
+# Verify activation (you should see (venv) in your terminal)
+```
 
-This project is licensed under the MIT License. Feel free to use the code and materials for educational purposes or personal projects.
+**Option B: Using Conda**
+```bash
+# Create conda environment
+conda create -n dl-assignments python=3.9
 
-# Contact ✉️
+# Activate it
+conda activate dl-assignments
+```
 
-If you have any questions or suggestions, please feel free to contact:
+### Step 2: Install Dependencies
 
-- Email: Ranjeet - contact [dot] ranjeetkumbhar [at] gmail [dot] com
+```bash
+# Install all required packages
+pip install -r requirements.txt
 
-Feel free to navigate to each assignment's directory for detailed instructions, code, and any additional resources. If you have any questions or need assistance, don't hesitate to reach out. Good luck with your assignments!
+# Verify installation
+python -c "import tensorflow as tf; print(f'TensorFlow version: {tf.__version__}')"
+```
 
-<p align="center">Copyright © 2023 Ranjeet Kumbhar</p>
+**Required Packages:**
+- `tensorflow` - Deep learning framework
+- `matplotlib` - Plotting and visualization
+- `numpy` - Numerical computations
+- `pillow` - Image processing
+- `scikit-learn` - Machine learning utilities
+- `seaborn` - Statistical data visualization
+
+### Step 3: Dataset Setup
+
+The datasets are already organized in the `data/` folder:
+- **MNIST**: Available through TensorFlow/Keras datasets (auto-downloaded)
+- **CIFAR-10**: Available through TensorFlow/Keras datasets (auto-downloaded)
+- **Caltech-101**: Located in `data/caltech-101-img/`
+- **Credit Card Fraud**: Located in `data/creditcardfraud-csv/`
+- **ECG Data**: Located in `data/ecg-csv/`
+- **VGG16 Weights**: Located in `data/vgg/`
+
+---
+
+## 📚 Assignments Overview
+
+### Assignment 1: Study of Deep Learning Packages 📚
+**File:** `Assignment_1.md`
+
+Comprehensive documentation comparing deep learning frameworks:
+- **TensorFlow** - Google's production-ready framework
+- **Keras** - High-level API for rapid prototyping
+- **Theano** - Historical symbolic computation library
+- **PyTorch** - Research-friendly dynamic framework
+
+**What you'll learn:**
+- Feature comparison between frameworks
+- Use cases for each framework
+- Current industry standards
+
+---
+
+### Assignment 2 & 3: Feedforward Neural Networks 🧠
+**Files:** 
+- `Assignment_2_3_MNIST.ipynb` - MNIST digit classification
+- `Assignment_2_3_CIFAR10.ipynb` - CIFAR-10 image classification
+- `Assignment_2_3_MNIST_offline_dataset.ipynb` - MNIST with local data
+- `Assignment_2_3_CIFAR10_offline_dataset.ipynb` - CIFAR-10 with local data
+
+**Objectives:**
+- Build feedforward neural networks using Keras/TensorFlow
+- Load and preprocess MNIST and CIFAR-10 datasets
+- Define network architecture with Dense layers
+- Train models using SGD optimizer
+- Evaluate model performance
+- Visualize training metrics (loss & accuracy)
+
+**Key Concepts:**
+- Neural network layers
+- Activation functions
+- Backpropagation
+- Gradient descent optimization
+- Model evaluation metrics
+
+**To Run:**
+```bash
+# Open in Jupyter or VS Code and run cells sequentially
+# Choose between online (auto-download) or offline (local data) versions
+```
+
+---
+
+### Assignment 4: Anomaly Detection with Autoencoders 🕵️
+**Files:**
+- `Assignment_4_ECG.ipynb` - ECG signal anomaly detection
+- `Assignment_4_ECG_offline_dataset.ipynb` - ECG with local data
+- `Assignment_4_CreditCard_offline_dataset.ipynb` - Credit card fraud detection
+
+**Objectives:**
+- Implement autoencoder architecture
+- Detect anomalies in time-series data (ECG)
+- Identify fraudulent credit card transactions
+- Understand encoder-decoder paradigm
+
+**Key Concepts:**
+- Autoencoder architecture
+- Latent space representation
+- Reconstruction error
+- Anomaly score calculation
+- Threshold-based detection
+
+**Datasets:**
+- ECG signals for heartbeat anomaly detection
+- Credit card transactions for fraud detection
+
+---
+
+### Assignment 5: Continuous Bag of Words (CBOW) 📝
+**File:** `Assignment_5.ipynb`
+
+**Objectives:**
+- Implement CBOW model for word embeddings
+- Prepare text data for NLP tasks
+- Generate training data from context
+- Train word2vec style embeddings
+
+**Key Concepts:**
+- Word embeddings
+- Context windows
+- Skip-gram vs CBOW
+- Vector representations of words
+
+---
+
+### Assignment 6: Transfer Learning with CNNs 📷
+**Files:**
+- `Assignment_6_classification.ipynb` - Caltech-101 classification
+- `Assignment_6_MNIST.ipynb` - MNIST with transfer learning
+
+**Objectives:**
+- Use pre-trained CNN models (VGG16, ResNet, etc.)
+- Apply transfer learning to new datasets
+- Freeze and fine-tune layers
+- Add custom classification layers
+- Optimize hyperparameters
+
+**Key Concepts:**
+- Transfer learning
+- Feature extraction
+- Fine-tuning
+- Pre-trained models
+- Domain adaptation
+
+**Datasets:**
+- Caltech-101: 101 object categories
+- CIFAR-10: 10 classes of objects
+
+**To Run:**
+```bash
+# Make sure VGG16 weights are in data/vgg/ folder
+# Open notebook and run cells sequentially
+```
+
+---
+
+## 📊 Dataset Information
+
+### MNIST Dataset
+- **Type**: Handwritten digits (0-9)
+- **Images**: 70,000 (60k train, 10k test)
+- **Size**: 28×28 grayscale
+- **Download**: Automatic via TensorFlow/Keras
+
+### CIFAR-10 Dataset
+- **Type**: 10 object classes
+- **Images**: 60,000 (50k train, 10k test)
+- **Size**: 32×32 color
+- **Classes**: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
+- **Download**: Automatic via TensorFlow/Keras
+
+### Caltech-101 Dataset
+- **Type**: Object recognition
+- **Categories**: 101 object classes
+- **Location**: `data/caltech-101-img/`
+- **Format**: JPG images (various sizes)
+
+### ECG Dataset
+- **Type**: Time-series ECG signals
+- **Location**: `data/ecg-csv/ecg.csv`
+- **Purpose**: Anomaly detection in heartbeat patterns
+
+### Credit Card Fraud Dataset
+- **Type**: Transaction data
+- **Location**: `data/creditcardfraud-csv/creditcard.csv`
+- **Purpose**: Fraud detection using autoencoders
+
+---
+
+## 🎮 Running the Notebooks
+
+### Using Jupyter Notebook
+
+```bash
+# 1. Activate your virtual environment
+source venv/bin/activate  # or conda activate dl-assignments
+
+# 2. Launch Jupyter Notebook
+jupyter notebook
+
+# 3. Navigate to the desired notebook in your browser
+# 4. Run cells sequentially using Shift+Enter
+```
+
+### Using VS Code
+
+```bash
+# 1. Open the project folder in VS Code
+code .
+
+# 2. Install Python and Jupyter extensions (if not already installed)
+# 3. Open any .ipynb file
+# 4. Select your Python interpreter (venv or conda environment)
+# 5. Click "Run All" or run cells individually
+```
+
+### Execution Order
+
+For each notebook:
+1. **Import cells first** - Run all import statements
+2. **Load data** - Execute data loading cells
+3. **Preprocessing** - Run data preprocessing cells
+4. **Model definition** - Define the network architecture
+5. **Training** - Train the model (this may take time)
+6. **Evaluation** - Evaluate and visualize results
+
+### Expected Runtime
+
+| Assignment | Approximate Time (CPU) | With GPU |
+|------------|----------------------|----------|
+| Assignment 2/3 (MNIST) | 5-10 minutes | 1-2 minutes |
+| Assignment 2/3 (CIFAR-10) | 15-30 minutes | 3-5 minutes |
+| Assignment 4 (Autoencoders) | 10-20 minutes | 2-4 minutes |
+| Assignment 5 (CBOW) | 5-10 minutes | 1-2 minutes |
+| Assignment 6 (Transfer Learning) | 20-40 minutes | 5-10 minutes |
+
+---
+
+## 🔧 Troubleshooting
+
+### Common Issues and Solutions
+
+#### 1. Import Errors
+```bash
+# Error: No module named 'tensorflow'
+# Solution:
+pip install tensorflow
+
+# Error: No module named 'sklearn'
+# Solution:
+pip install scikit-learn
+```
+
+#### 2. CUDA/GPU Issues
+```bash
+# Check if TensorFlow detects GPU
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+# If no GPU detected but you have one, install GPU version:
+pip install tensorflow[and-cuda]
+```
+
+#### 3. Memory Errors
+```python
+# Reduce batch size in your notebook
+batch_size = 32  # Try reducing to 16 or 8
+
+# Or enable memory growth for GPU
+import tensorflow as tf
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    tf.config.experimental.set_memory_growth(gpus[0], True)
+```
+
+#### 4. Kernel Issues in Jupyter
+```bash
+# Install ipykernel in your virtual environment
+pip install ipykernel
+
+# Add your environment as a Jupyter kernel
+python -m ipykernel install --user --name=venv --display-name "Python (DL Assignments)"
+```
+
+#### 5. Dataset Loading Issues
+```python
+# If automatic download fails, check internet connection
+# For offline versions, ensure datasets are in correct folders:
+# data/mnist-jpg/, data/cifar-10-img/, etc.
+```
+
+#### 6. Slow Training
+- **Solution 1**: Reduce number of epochs
+- **Solution 2**: Reduce model complexity (fewer layers/neurons)
+- **Solution 3**: Use smaller batch size
+- **Solution 4**: Use GPU if available
+
+---
+
+## 📁 Project Structure
+
+```
+SPPU-BE-IT-DL-ASSIGNMENTS/
+│
+├── Assignment_1.md                              # Framework comparison document
+├── Assignment_2_3_MNIST.ipynb                   # MNIST classification
+├── Assignment_2_3_MNIST_offline_dataset.ipynb   # MNIST with local data
+├── Assignment_2_3_CIFAR10.ipynb                 # CIFAR-10 classification
+├── Assignment_2_3_CIFAR10_offline_dataset.ipynb # CIFAR-10 with local data
+├── Assignment_4_ECG.ipynb                       # ECG anomaly detection
+├── Assignment_4_ECG_offline_dataset.ipynb       # ECG with local data
+├── Assignment_4_CreditCard_offline_dataset.ipynb# Fraud detection
+├── Assignment_5.ipynb                           # CBOW word embeddings
+├── Assignment_6_classification.ipynb            # Transfer learning (Caltech)
+├── Assignment_6_MNIST.ipynb                     # Transfer learning (MNIST)
+├── requirements.txt                             # Python dependencies
+├── README.md                                    # This file
+│
+└── data/                                        # Datasets directory
+    ├── mnist-jpg/                              # MNIST images
+    ├── cifar-10-img/                           # CIFAR-10 images
+    ├── caltech-101-img/                        # Caltech-101 images
+    ├── creditcardfraud-csv/                    # Credit card data
+    ├── ecg-csv/                                # ECG time-series data
+    └── vgg/                                    # Pre-trained VGG16 weights
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to improve this repository:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+**Areas for contribution:**
+- Bug fixes
+- Additional datasets
+- Performance optimizations
+- Documentation improvements
+- New assignment implementations
+
+---
+
+## 📖 Learning Resources
+
+### Recommended Reading
+- [Deep Learning Book by Ian Goodfellow](https://www.deeplearningbook.org/)
+- [TensorFlow Official Documentation](https://www.tensorflow.org/tutorials)
+- [Keras Documentation](https://keras.io/guides/)
+
+### Online Courses
+- [Deep Learning Specialization - Andrew Ng (Coursera)](https://www.coursera.org/specializations/deep-learning)
+- [Fast.ai Practical Deep Learning](https://www.fast.ai/)
+- [TensorFlow Developer Certificate](https://www.tensorflow.org/certificate)
+
+### Video Tutorials
+- [3Blue1Brown - Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- [Sentdex - Deep Learning with Python](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+Feel free to use the code and materials for:
+- Educational purposes
+- Personal projects
+- Academic assignments
+- Research work
+
+---
+
+## 📧 Contact & Support
+
+If you have any questions, suggestions, or need assistance:
+
+- **Issues**: Open an issue on GitHub
+- **Discussions**: Use GitHub Discussions for questions
+- **Email**: [your-email@example.com]
+
+---
+
+## 🌟 Acknowledgments
+
+- **SPPU BE IT Curriculum** - For providing comprehensive deep learning syllabus
+- **TensorFlow & Keras Teams** - For excellent documentation and tools
+- **Dataset Providers** - MNIST, CIFAR-10, Caltech-101, and other dataset creators
+- **Open Source Community** - For continuous support and contributions
+
+---
+
+## 📈 Stats
+
+![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/SPPU-BE-IT-DL-ASSIGNMENTS)
+![GitHub issues](https://img.shields.io/github/issues/yourusername/SPPU-BE-IT-DL-ASSIGNMENTS)
+![GitHub stars](https://img.shields.io/github/stars/yourusername/SPPU-BE-IT-DL-ASSIGNMENTS)
+
+---
+
+<p align="center">
+  <b>Happy Learning! 🎓</b><br>
+  Made with ❤️ for SPPU BE IT Students<br>
+  <sub>© 2025 - All Rights Reserved</sub>
+</p>
+
+---
+
+## 🔄 Version History
+
+- **v1.0.0** (2025) - Initial release with all 6 assignments
+- Added comprehensive documentation and setup instructions
+- Included troubleshooting guide
+- Organized dataset structure
+
+---
+
+**⭐ If you find this repository helpful, please consider giving it a star!**
